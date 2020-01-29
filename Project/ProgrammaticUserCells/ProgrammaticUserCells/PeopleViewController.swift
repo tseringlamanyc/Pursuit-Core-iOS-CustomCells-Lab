@@ -64,8 +64,14 @@ extension PeopleViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: itemWidth, height: 120)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailStoryboard = UIStoryboard(name: "PeopleDetail", bundle: nil)
+        guard let peopleDetailVC = detailStoryboard.instantiateViewController(identifier: "PeopleDetailVC") as? PeopleDetailVC else {
+            fatalError()
+        }
+        let aUser = users[indexPath.row]
+        peopleDetailVC.user = aUser
+        navigationController?.pushViewController(peopleDetailVC, animated: true)
+    }
 }
 

@@ -84,6 +84,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D7N-f3-Yy6"/>
                     </view>
+                    <connections>
+                        <outlet property="birthday" destination="T2N-3K-7hP" id="gCL-ir-QIF"/>
+                        <outlet property="cell" destination="B2j-AX-z3h" id="ZAi-4Z-ZmT"/>
+                        <outlet property="email" destination="SIY-sR-IBU" id="rfN-xE-cuk"/>
+                        <outlet property="gender" destination="ALf-gi-ukL" id="MKL-db-Iba"/>
+                        <outlet property="location" destination="ghO-FC-vdB" id="G3a-lC-Xt0"/>
+                        <outlet property="name" destination="Qqh-we-lPK" id="ka2-Vy-5JU"/>
+                        <outlet property="phone" destination="eFm-vX-k3D" id="4CJ-h4-FFQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0H-br-7vO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
