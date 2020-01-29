@@ -10,4 +10,6 @@ import UIKit
 
 class PeopleCell: UICollectionViewCell {
     
+    @IBOutlet weak var peopleImage: UIImageView!
+    
 }

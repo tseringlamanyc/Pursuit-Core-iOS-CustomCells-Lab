@@ -15,6 +15,7 @@ class PeopleView: UIView {
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: 400, height: 400)
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        cv.backgroundColor = .systemBlue
         return cv
     }()
 

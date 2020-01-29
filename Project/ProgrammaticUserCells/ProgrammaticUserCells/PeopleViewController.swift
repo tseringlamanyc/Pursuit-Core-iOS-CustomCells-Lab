@@ -5,12 +5,33 @@ class PeopleViewController: UIViewController {
     private let peopleView = PeopleView()
     
     private var users = [User]()
+    
+    override func loadView() {
+        view = peopleView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         peopleView.collectionView.dataSource = self
-        peopleView.collectionView.delegate = self 
+        peopleView.collectionView.delegate = self
+        peopleView.collectionView.register(UINib(nibName: "PeopleCell", bundle: nil), forCellWithReuseIdentifier: "peopleCell")
+        loadUsers()
     }
+    
+    func loadUsers() {
+        guard let fileURL = Bundle.main.url(forResource: "randomUserSampleResponse", withExtension: "json") else {
+            fatalError()
+        }
+        do {
+           let data = try Data(contentsOf: fileURL)
+           let things = User.getUsers(from: data)
+            users = things
+        } catch {
+            print("nope")
+        }
+    }
+    
 }
 
 extension PeopleViewController: UICollectionViewDataSource {
@@ -19,7 +40,11 @@ extension PeopleViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleCell", for: indexPath) as? PeopleCell else {
+            fatalError()
+        }
+        cell.backgroundColor = .systemGray
+        return cell
     }
     
     
@@ -27,11 +52,13 @@ extension PeopleViewController: UICollectionViewDataSource {
 
 extension PeopleViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        <#code#>
+        let maxSize = UIScreen.main.bounds.size
+        let itemWidth: CGFloat = maxSize.width * 0.95
+        return CGSize(width: itemWidth, height: 120)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        <#code#>
+//    }
 }
 
