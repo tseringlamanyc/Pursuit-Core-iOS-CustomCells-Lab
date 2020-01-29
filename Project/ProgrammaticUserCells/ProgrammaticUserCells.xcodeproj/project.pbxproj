@@ -11,7 +11,7 @@
 		52F394B323E23037003798EA /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F394B223E23037003798EA /* PeopleCell.swift */; };
 		52F394B523E23040003798EA /* PeopleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52F394B423E23040003798EA /* PeopleCell.xib */; };
 		52F394B723E2305F003798EA /* PeopleDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F394B623E2305F003798EA /* PeopleDetail.storyboard */; };
-		52F394B923E23073003798EA /* PoepleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F394B823E23073003798EA /* PoepleDetailVC.swift */; };
+		52F394B923E23073003798EA /* PeopleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F394B823E23073003798EA /* PeopleDetailVC.swift */; };
 		52F394BD23E2392B003798EA /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F394BC23E2392B003798EA /* helper.swift */; };
 		CDA0F5CE2348F74900B2E7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */; };
 		CDA0F5D02348F74900B2E7F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */; };
@@ -42,7 +42,7 @@
 		52F394B223E23037003798EA /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
 		52F394B423E23040003798EA /* PeopleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleCell.xib; sourceTree = "<group>"; };
 		52F394B623E2305F003798EA /* PeopleDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PeopleDetail.storyboard; sourceTree = "<group>"; };
-		52F394B823E23073003798EA /* PoepleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoepleDetailVC.swift; sourceTree = "<group>"; };
+		52F394B823E23073003798EA /* PeopleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailVC.swift; sourceTree = "<group>"; };
 		52F394BC23E2392B003798EA /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
 		CDA0F5CA2348F74900B2E7F0 /* ProgrammaticUserCells.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammaticUserCells.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				52F394B223E23037003798EA /* PeopleCell.swift */,
 				52F394B423E23040003798EA /* PeopleCell.xib */,
 				52F394B623E2305F003798EA /* PeopleDetail.storyboard */,
-				52F394B823E23073003798EA /* PoepleDetailVC.swift */,
+				52F394B823E23073003798EA /* PeopleDetailVC.swift */,
 				CDA0F5EF2348F7E300B2E7F0 /* User.swift */,
 				CDA0F5D62348F74F00B2E7F0 /* Assets.xcassets */,
 				CDA0F5D82348F74F00B2E7F0 /* LaunchScreen.storyboard */,
@@ -246,7 +246,7 @@
 				CDA0F5D22348F74900B2E7F0 /* PeopleViewController.swift in Sources */,
 				CDA0F5F52348FE8800B2E7F0 /* AppError.swift in Sources */,
 				52F394B123E22D7A003798EA /* PeopleView.swift in Sources */,
-				52F394B923E23073003798EA /* PoepleDetailVC.swift in Sources */,
+				52F394B923E23073003798EA /* PeopleDetailVC.swift in Sources */,
 				CDA0F5CE2348F74900B2E7F0 /* AppDelegate.swift in Sources */,
 				52F394B323E23037003798EA /* PeopleCell.swift in Sources */,
 				CDA0F5F92348FEB800B2E7F0 /* UsersFetchingService.swift in Sources */,

@@ -36,19 +36,7 @@ class PeopleViewController: UIViewController {
         } catch {
             print("nope")
         }
-    }
-    
-//    func loadPeople() {
-//        UsersFetchingService.manager.getUsers { [weak self] (result) in
-//            switch result {
-//            case .failure(_):
-//                print("error")
-//            case .success(let data):
-//                self?.users = data
-//            }
-//        }
-//    }
-    
+    }    
 }
 
 extension PeopleViewController: UICollectionViewDataSource {
