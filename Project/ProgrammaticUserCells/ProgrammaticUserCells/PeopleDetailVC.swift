@@ -32,7 +32,24 @@ class PeopleDetailVC: UIViewController {
         email.text = user.email
         location.text = user.location.state
         cell.text = "Cell:\(user.cell)"
-        birthday.text = "DOB:\(user.dob.date)"
+        
+        let isoDateFormatter = ISO8601DateFormatter()
+        isoDateFormatter.formatOptions = [.withInternetDateTime,
+                                          .withDashSeparatorInDate,
+                                          .withFullDate,
+                                          .withFractionalSeconds,
+                                          .withColonSeparatorInTimeZone]
+        isoDateFormatter.timeZone = TimeZone.current
+        _ = isoDateFormatter.string(from: Date())
+        let timestampString = user.dob.date
+        if let date = isoDateFormatter.date(from: timestampString) {
+        let dateFormatter = DateFormatter()
+          dateFormatter.dateFormat = "MMMM, dd, yyyy h:mm a"
+        let dateFormattedString = dateFormatter.string(from: date)
+            birthday.text = dateFormattedString
+        } else {
+        print("not a valid date")
+        }
     }
     
 
