@@ -10,6 +10,24 @@ import UIKit
 
 class PeopleCell: UICollectionViewCell {
     
-    @IBOutlet weak var peopleImage: UIImageView!
+    var user: User!
     
+    @IBOutlet weak var peopleImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    func configureCell(user: User) {
+        
+        nameLabel.text = user.name.first
+        
+        ImageCLient.getImage(urlString: user.picture.large) { [unowned self ](result) in
+            switch result {
+            case .failure(_):
+                print("error")
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self.peopleImage.image = image
+                }
+            }
+        }
+    }
 }

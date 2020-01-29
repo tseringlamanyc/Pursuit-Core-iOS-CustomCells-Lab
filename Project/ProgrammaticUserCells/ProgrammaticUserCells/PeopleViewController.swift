@@ -4,7 +4,13 @@ class PeopleViewController: UIViewController {
     
     private let peopleView = PeopleView()
     
-    private var users = [User]()
+    private var users = [User]() {
+        didSet {
+            DispatchQueue.main.async {
+            self.peopleView.collectionView.reloadData()
+            }
+        }
+    }
     
     override func loadView() {
         view = peopleView
@@ -32,6 +38,17 @@ class PeopleViewController: UIViewController {
         }
     }
     
+//    func loadPeople() {
+//        UsersFetchingService.manager.getUsers { [weak self] (result) in
+//            switch result {
+//            case .failure(_):
+//                print("error")
+//            case .success(let data):
+//                self?.users = data
+//            }
+//        }
+//    }
+    
 }
 
 extension PeopleViewController: UICollectionViewDataSource {
@@ -43,6 +60,8 @@ extension PeopleViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "peopleCell", for: indexPath) as? PeopleCell else {
             fatalError()
         }
+        let aUser = users[indexPath.row]
+        cell.configureCell(user: aUser)
         cell.backgroundColor = .systemGray
         return cell
     }
